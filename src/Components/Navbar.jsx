@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar({setCat}) {
+function Navbar() {
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary "  data-bs-theme="dark" >
@@ -12,29 +12,27 @@ function Navbar({setCat}) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <div className="nav-link active r">Home</div>
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li className="nav-item">
-          <div className="nav-link active" onClick={()=>setCat("general")}>General</div>
+          <a className="nav-link active" aria-current="page" href="#">General</a>
         </li>
         <li className="nav-item">
-          <div className="nav-link active"  onClick={()=>setCat("business")}>Business</div>
+          <a className="nav-link active" aria-current="page" href="#">Business</a>
         </li>
         <li className="nav-item">
-          <div className="nav-link active"  onClick={()=>setCat("sports")}>Sports</div>
-        </li>
-        <li className="nav-item"  >
-          <div className="nav-link active"  onClick={()=>setCat("health")}>Health</div>
-        </li>
-        <li className="nav-item"  >
-          <div className="nav-link active"  onClick={()=>setCat("science")}>Science</div>
+          <a className="nav-link active" aria-current="page" href="#">Sports</a>
         </li>
         <li className="nav-item">
-          <div className="nav-link active"  onClick={()=>setCat("entertainment")}>Enterntaiment</div>
+          <a className="nav-link active" aria-current="page" href="#">Science</a>
         </li>
         <li className="nav-item">
-          <div className="nav-link active"  onClick={()=>setCat("technology")}>Technology</div>
+          <a className="nav-link active" aria-current="page" href="#">Entertainment</a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Technology</a>
+        </li>
+        
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

@@ -7,18 +7,18 @@ function Newscall({cat}) {
   useEffect(() => {
     const fetchNews = async () => {
       await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=${Newskey}`
+        `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${Newskey}`
       )
         .then((res) => res.json())
         .then((data) => setNews(data.articles));
     };
 
     fetchNews();
-  }, [cat]);
+  }, []);
 
   return (
     <div>
-      <h1 className="text-center text-light">
+      <h1 className="text-center text-light ">
         Latest <span className="badge bg-danger">News</span>
       </h1>
       {news.map((item, index) => {
